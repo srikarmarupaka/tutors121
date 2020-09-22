@@ -1,0 +1,47 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+#findatutor{
+    background-color:  rgb(80, 212, 248);
+    height: 100vh;
+            .row1
+            {
+                width: 30%;position: relative; top: 45%;left: 50%;transform: translate(-50%,-50%);
+                h1
+                {
+                    font-size: 59px ;
+                }
+                p{
+                    text-align: end;
+                    font-size: 18px;
+                }
+            }
+           
+}
+.col-1, .col-11{
+    padding: 0;
+}
+.container-fluid{
+    //max-width: 7.33%;
+    padding: 0;
+}
+#cprt
+{
+    bottom: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    color: white;
+}
+#chat
+{
+    color: white;
+    border: 0;
+    //background-color: red;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+}

@@ -1,0 +1,227 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+  #bigscreen {
+    display: none;
+  }
+  #landingpage {
+    background-color: #126b77;
+    height: 100vh;
+  }
+  #landingpage .navbar-toggler {
+    background-color: #126b77;
+    color: white;
+    font-size: 40px;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+  }
+  #landingpage .navbar-toggler :focus {
+    color: black;
+    background-color: white;
+  }
+  #landingpage #navbar {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+  }
+  #landingpage #navbar a, #landingpage #navbar a:hover {
+    color: black;
+    text-decoration: none;
+  }
+  #landingpage .heading {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 90%;
+    color: white;
+  }
+  #landingpage .heading img {
+    height: 100px;
+    max-width: 40%;
+  }
+  #landingpage .heading hr {
+    border: 2px solid white;
+    width: 10%;
+  }
+  #landingpage .heading ul {
+    padding: 0px;
+    list-style-type: none;
+  }
+  #landingpage .heading ul li {
+    opacity: 0.5;
+  }
+  #landingpage .heading button {
+    border-radius: 30px;
+    padding: 15px;
+    border: 0;
+  }
+  #landingpage .heading .active {
+    font-weight: bold;
+    opacity: 1;
+    font-size: 20px;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  #smallscreen {
+    display: none;
+  }
+  #navbar {
+    text-align: right;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 1;
+    font-size: small;
+  }
+  .nav-link {
+    color: white;
+  }
+  .active {
+    font-weight: bold;
+    color: white;
+  }
+  #Why1to1 {
+    background-color: #77ada4;
+    height: 100vh;
+  }
+  #Why1to1 .row1 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #Why1to1 .row1 h1 {
+    font-size: 50px;
+  }
+  #howitworks {
+    height: 100vh;
+    background-color: #7fb9b0;
+    color: white;
+  }
+  #howitworks .container {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  #howitworks .colbox {
+    width: 80%;
+  }
+  #howitworks .col-md-3 p {
+    text-align: justify;
+    display: table;
+  }
+  #howitworks .col-md-3 p span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #howitworks .number {
+    font-size: 70px;
+  }
+  #howitworks svg {
+    font-size: 30px;
+  }
+  #howitworks .titl {
+    font-size: 20px;
+  }
+  #howitworks .row3 p {
+    display: table;
+    vertical-align: middle;
+  }
+  #howitworks .row3 p span {
+    display: table-cell;
+  }
+  #findatutor {
+    background-color: #86c4b9;
+    height: 100vh;
+  }
+  #findatutor .row1 {
+    width: 35%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #findatutor .row1 h1 {
+    font-size: 67px;
+  }
+  #findatutor .row1 p {
+    text-align: end;
+    font-size: 22px;
+  }
+  #successstories {
+    height: 100vh;
+    background-color: burlywood;
+  }
+  #gettingstarted {
+    height: 100vh;
+    background-color: aqua;
+  }
+  #becomeatutor {
+    background-color: black;
+    height: 100vh;
+  }
+  #chat {
+    color: white;
+    border: 0;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 7%;
+    right: 7%;
+  }
+  #user {
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    font-size: 12px;
+  }
+  #user svg {
+    font-size: 40px;
+  }
+  #cprt {
+    bottom: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    color: white;
+  }
+  #cprt a, #cprt a :hover {
+    color: white;
+    text-decoration: none;
+  }
+  .videobtn {
+    color: white;
+    background-color: #64928a;
+    width: 75px;
+    border-radius: 8px;
+    font-size: 22px;
+  }
+}
+/*# sourceMappingURL=home.component.css.map */

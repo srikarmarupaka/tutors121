@@ -1,0 +1,27 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav {
+  padding: 5px;
+}
+
+.navbar {
+  text-align: center;
+  width: 80px;
+  background-color: #648b84;
+  height: 100vh;
+  font-size: 10px;
+  color: white;
+}
+
+.active {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+a, a :hover {
+  color: white;
+  text-decoration: none;
+}
+/*# sourceMappingURL=leftnav.component.css.map */

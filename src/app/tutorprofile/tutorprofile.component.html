@@ -1,0 +1,92 @@
+<div *ngFor="let tutor of tutorslist">
+    <div class="container" *ngIf="tutor.id == tutorid">
+        <div class="closer d-flex justify-content-center" >
+          <a routerLink="/tutorslist">
+            <button type="button" class="closer" aria-label="Close">
+                <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                    <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                </svg>
+              </button>
+          </a>
+        </div>
+        <p class="float-right" style="margin-bottom: 0;">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" color="orange" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+            </svg> <span>{{tutor.rating}}({{tutor.ratingcount}})</span>
+        </p>
+        <div class="card headcard">
+            <div class="card-body">
+                <div class="row">
+                    <span class="col-3">
+                        <figure class="figure">
+                            <img src="../../assets/srikar.jpg" alt="" width="80px" height="100px">
+                            <figcaption class="figure-caption booktl">Book trial lesson</figcaption>
+                        </figure>
+                    </span>
+                    <span class="col-9" style="color:blue">
+                        <p style="color: red;">
+                            <b>{{tutor.name}}</b>
+                            
+                        </p>
+                        <p>{{tutor.students}} active students * {{tutor.lessons}} lessons</p>
+                        <p><b>Speaks : </b> {{tutor.language[0]}} <kbd style="background-color: rgb(126, 175, 53);">Native</kbd> , {{tutor.language[1]}}</p>
+                        <p><b>Teaches : </b> Telugu, English, Computers</p>
+                        <p><b>Gender : </b> {{tutor.gender}}</p>
+                        <p><b>Age : </b> {{tutor.age}}</p>
+                        <p><b>Current Positon : </b> {{tutor.currentposition}}</p>
+                    </span>
+                    <div class="ratecost">
+                        <span style="font-size: 14px; vertical-align: top;">
+                                                
+                            <img src="../../assets/001-uk.svg" alt="" width="30px" height="15px">
+                            
+                            <svg width="1em" height="1em"  color="red" viewBox="0 0 16 16" color="blue" class="bi bi-shield-fill-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 .5c-.662 0-1.77.249-2.813.525a61.11 61.11 0 0 0-2.772.815 1.454 1.454 0 0 0-1.003 1.184c-.573 4.197.756 7.307 2.368 9.365a11.192 11.192 0 0 0 2.417 2.3c.371.256.715.451 1.007.586.27.124.558.225.796.225s.527-.101.796-.225c.292-.135.636-.33 1.007-.586a11.191 11.191 0 0 0 2.418-2.3c1.611-2.058 2.94-5.168 2.367-9.365a1.454 1.454 0 0 0-1.003-1.184 61.09 61.09 0 0 0-2.772-.815C9.77.749 8.663.5 8 .5zm2.854 6.354a.5.5 0 0 0-.708-.708L7.5 8.793 6.354 7.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <kbd style="font-size: 24px;"><b>$30</b></kbd>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card midcard">
+            <div class="card-body">
+                <b style="font-size: 16px;color:blue">About me</b>
+                <p style="color: red;"><b>{{tutor.certification[0]}} certified {{tutor.certification[1]}} tutor | {{tutor.experience}} years business experience</b></p>
+                <p>CELTA qualified English language teacher with over 6 years experience in the
+                    Marketing and Advertising industry.</p><br>
+                <p>{{tutor.description}}</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body bottomcardbody" style="padding: 0px;">
+                <nav style="font-size: 12px;">
+                    <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+                      <a class="nav-link active" id="nav-video-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">My Video</a>
+                      <a class="nav-link" id="nav-schedule-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">My Schedule</a>
+                      <a class="nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Reviews</a>
+                    </div>
+                  </nav>
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <video src="../../assets/1. Applications of Machine Learning.mp4" controls width="100%" height="100%"></video>
+                    </div>
+                    <div class="tab-pane fade  text-center" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        No schedule yet
+                    </div>
+                    <div class="tab-pane fade text-center" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        No Reviews yet. <br> I know you are kind to review me first.
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="container bottombuttons">
+            <button class="btn-primary">Book trial lesson</button>
+            <button class="btn-danger">Message me</button>
+        </div>
+    </div>
+</div>

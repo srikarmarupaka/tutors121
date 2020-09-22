@@ -1,0 +1,23 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.nav{
+    padding: 5px;
+}
+.navbar{
+    text-align: center;
+    width: 80px;
+    background-color: rgb(100, 139, 132);
+    height: 100vh;
+    font-size: 10px ;
+    color: white;
+}
+.active{
+    font-size:14px ;
+    font-weight: bold;
+}
+
+a, a :hover{
+    color: white;
+    text-decoration: none;
+}

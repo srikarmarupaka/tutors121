@@ -1,0 +1,292 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<body data-spy="scroll" data-target="#navbar" data-offset="50" id="bigscreen">
+    <button  id="user" type="button" class="btn" data-toggle="modal" data-target="#exampleModal">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg><br>
+            LOGIN
+    </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <a routerLink="/findateacher" routerLinkActive="active"><button  type="submit" class="btn btn-success" id="button-addon2">Submit</button></a>
+
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <nav id="navbar" class="nav flex-column fixed" role="tablist">
+        <div class="container cont1">
+            <a class="nav-link active" href="#Why1to1">Why 1 to 1 lesson?</a>
+            <a class="nav-link" href="#howitworks">How it works?</a>
+            <a class="nav-link" href="#findatutor">Find a tutor</a>
+            <a class="nav-link" href="#successstories">Success stories</a>
+            <a class="nav-link" href="#gettingstarted">Getting started training</a>
+            <a class="nav-link" href="#becomeatutor">Become a tutor</a>
+        </div>
+    </nav>
+    
+    <div id="Why1to1">
+        <div class="row1 text-center">
+                <h1>Welcome to 121 lessons</h1>
+                <p>Are you seeking a tutor for yourself or you children? Watch the <br>
+                following video to learn the benefits of having 1 to 1 learning.</p>
+                <div style="font-size: 40px;">
+                  <button class="btn videobtn"><i class="fa fa-play"></i></button>
+                  <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-collection-play-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5h-13zm5.265-7.924A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848l-4-2.5zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z"/>
+                  </svg> -->
+                </div>
+        </div>
+    </div>
+    <div id="howitworks">
+        <div class="container">
+            <div>
+                <h1>How it works?</h1>
+                <p>It's easy. It's simple. It's fun.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="colbox">
+                      <p>
+                        <span class="number">1</span>
+                        <span>
+                          <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-hourglass-top" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M2 14.5a.5.5 0 0 0 .5.5h11a.5.5 0 1 0 0-1h-1v-1a4.5 4.5 0 0 0-2.557-4.06c-.29-.139-.443-.377-.443-.59v-.7c0-.213.154-.451.443-.59A4.5 4.5 0 0 0 12.5 3V2h1a.5.5 0 0 0 0-1h-11a.5.5 0 0 0 0 1h1v1a4.5 4.5 0 0 0 2.557 4.06c.29.139.443.377.443.59v.7c0 .213-.154.451-.443.59A4.5 4.5 0 0 0 3.5 13v1h-1a.5.5 0 0 0-.5.5zm2.5-.5v-1a3.5 3.5 0 0 1 1.989-3.158c.533-.256 1.011-.79 1.011-1.491v-.702s.18.101.5.101.5-.1.5-.1v.7c0 .701.478 1.236 1.011 1.492A3.5 3.5 0 0 1 11.5 13v1h-7z"/>
+                          </svg> 
+                          <span class="titl">Find a tutor</span>
+                        </span>
+                      </p>
+                        <p>Pellentesque
+                            habitant
+                            morbi tristique senectus
+                            et netus et malesuada
+                            fames ac turpis egestas.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="colbox">
+                      <p>
+                        <span class="number">2</span>
+                      <span>
+                        <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar-event" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1zm1-3a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
+                          <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"/>
+                          <rect width="2" height="2" x="11" y="6" rx=".5"/>
+                      </svg>
+                      <span class="titl">Schedule time</span>
+                      </span>
+                      </p>
+                      <p>Pellentesque
+                          habitant
+                          morbi tristique senectus
+                          et netus et malesuada
+                          fames ac turpis egestas.</p>
+  
+                    </div>
+                </div>
+                <div class="col-md-3">
+                        <div class="colbox">
+                          <p>
+                            <span class="number">3</span>
+                              <span>
+                                <svg width="2em" height="1em" viewBox="0 0 16 16" class="bi bi-wallet2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2.5 4l10-3A1.5 1.5 0 0 1 14 2.5v2h-1v-2a.5.5 0 0 0-.5-.5L5.833 4H2.5z"/>
+                                  <path fill-rule="evenodd" d="M1 5.5A1.5 1.5 0 0 1 2.5 4h11A1.5 1.5 0 0 1 15 5.5v8a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5v-8zM2.5 5a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-11z"/>
+                              </svg>
+                              <span>Pay</span>
+                              </span>
+                          </p>
+                        <p>Pellentesque
+                          habitant
+                          morbi tristique senectus
+                          et netus et malesuada
+                          fames ac turpis egestas.</p>
+                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="colbox">
+                      <p>
+                        <span class="number">4</span>
+                      <span>
+                        <i class="material-icons" style="font-size: 30px;">voice_chat</i>
+                        <span class="titl">Attend</span>
+                      </span>
+                      </p>
+                        <p>Pellentesque
+                          habitant
+                          morbi tristique senectus
+                          et netus et malesuada
+                          fames ac turpis egestas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row row3">
+                <p><span>Watch this short video to explain how our platform works. </span>
+                  <button class="btn videobtn"><i class="fa fa-play"></i></button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="findatutor">
+        <div class="row1">
+            <h1>private tution</h1>
+            <p>boost your knowledge and skills today <br> with the best tutors online</p>
+            <form action="">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="what do you want to learn today" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button" id="button-addon2">find a teacher</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="successstories">
+
+    </div>
+    <div id="gettingstarted">
+
+    </div>
+    <div id="becomeatutor">
+
+    </div>
+    <button  id="chat" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal1">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-left-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path fill-rule="evenodd" d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+    </button>
+
+    <!-- Modal -->
+  <div class="modal modal1 fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputmessage">Message</label>
+                  <textarea name="" id="" cols="30" rows="5" class="form-control" id="exampleInputmessage"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Send</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <div id="cprt">
+        <div class="row">
+            <div class="col-md-6">
+              <a href="#">find a tutor</a> | <a href="#">Become a tutor</a>
+            </div> 
+            <div class="col-md-6">
+                <a href="#">&copy;copyrights. </a> <a href="#"> Terms & conditions. </a> <a href="#"> Privacy policy.</a>
+            </div>    
+        </div>   
+    </div>
+    <script>
+        $(".nav .nav-link").on("click", function()
+        {
+            $(".nav").find(".active").removeClass("active");
+            $(this).addClass("active");
+            $(this).add(<i class="fa fa-circle" aria-hidden="true"></i>);
+        });
+
+        $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+        })
+
+        $('body').scrollspy({ target: '#navbar' })
+    </script>
+</body>
+<body id="smallscreen">
+  <div id="landingpage">
+    <nav class="navbar fixed-top navbar-expand-lg">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navbar">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-justify" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="navbar-item"><a href="#" class="navbar-link">Why 1 to 1</a></li>
+              <li class="navbar-item"><a href="#" class="navbar-link">How to use</a></li>
+              <li class="navbar-item"><a href="#" class="navbar-link">find a tutor</a></li>
+              
+          </ul>
+      </div>
+    </nav>
+      <div class="heading float-center">
+          <img src="../../assets/121logo.png" class="img-fluid" alt="" >
+          <h1>121 lessons</h1>
+          <hr>
+          <p>
+              Private Tuition Made Easy... <br><br>
+              Simply select the subject you wish to learn <br>
+              and connect with your favourite teacher:
+          </p>
+          <ul>
+              <li>GCSE English</li>
+              <li>A Level English</li>
+              <li class="active">ESOL English</li>
+              <li>GCSE French</li>
+              <li>GCSE Arabic</li>
+          </ul>
+          <a routerLink="/tutorslist" routerLinkActive=""><button type="button" class="rounded-pill">find a tutor</button></a>
+          
+      </div>
+  </div>
+  
+  <script>
+    $(".heading ul li").on("click", function()
+    {
+        $(".heading").find(".active").removeClass("active");
+        $(this).addClass("active");
+       
+    });
+  </script>
+</body>

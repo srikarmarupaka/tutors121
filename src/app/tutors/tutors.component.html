@@ -1,0 +1,303 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container-fluid" id="bigscreen">
+    <div class="row">
+        <app-leftnav style="position: fixed;"></app-leftnav>
+        <div class="container" style="position: relative; left: 25px;padding: auto 15px; color: rgb(107, 156, 147);">
+                <div class="row" style="position: relative; left: 20px; top: 10px; width: 100%;color:rgb(107, 156, 147)">
+                    <a href="#">find a tutor </a> | <a href="#"> Become a tutor</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" style="color: rgb(107, 156, 147);">
+                        <form action="">
+                            <div class="input-group" style="vertical-align: middle; position: relative; top: 40px;">
+                                <input type="text" class="form-control" placeholder="AS English" color="rgb(107, 156, 147)" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <a routerLink="/tutorslist" routerLinkActive="active"><button class="btn btn-secondary" type="button" id="button-addon2" style=" font-weight: 500;">find a teacher</button></a>
+                                </div> &nbsp;&nbsp;&nbsp;
+                                <button type="button" class="btn btn-light"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-funnel" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+                                  </svg>
+                                </button>
+                            </div>
+                        </form> <br><br>
+                        <small><b>Filters:</b> Age (30-40), Gender (Male), Country (UK), Language (English)</small>
+                    </div>
+                    <div class="col-md-6 text-right" style="position: relative; color: rgb(107, 156, 147);">
+                        <div style="font-size: 50px; font-weight: 500;">find a tutor</div>
+                        <p>boost your knowledge and skills today <br>
+                            with the best online tutors</p>
+                    </div>
+                </div>
+                <div class="row float-right" style="text-align: right;position: relative; right: 20px; color: rgb(107, 156, 147);">
+                    <button type="button" class="btn btn-light" >
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-contract" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3.646 13.854a.5.5 0 0 0 .708 0L8 10.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zm0-11.708a.5.5 0 0 1 .708 0L8 5.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                         <span style="font-size: small;">sort by price(High to low)</span>
+                    </button>
+                </div>
+                <div style="clear: both;"></div> <br>
+                
+                <div class="card clearfix " id="card" *ngFor="let tutor of tutorslist" style="margin: 10px 0px;">
+                    
+                    <div class="card-body">
+                        <div class="row">                            
+                            <div class="col-2" >
+                                <div class="imgfig">
+                                    <div class="icns">
+                                        <i class="fa fa-play-circle-o"></i><br>
+                                        <i class="fa fa-heart"></i><br>
+                                        <i class="fa fa-envelope"></i><br>
+                                        <i class="fa fa-calendar"></i><br>
+                                    </div>
+                                    <figure class="figure">
+                                        <figcaption class="figure-caption recomend" *ngIf="tutor.recomended">Recomended</figcaption>
+                                        <img src="../../assets/srikar.jpg" class="figure-img img-fluid" alt="..." width="100px">
+                                        <figcaption class="figure-caption booktl">Book trail lesson</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="col-10" style="vertical-align: middle; padding: 10px 5px;">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <span style="color:rgb(228, 92, 92); font-size: 18px;"><b>{{tutor.name}}</b></span>
+                                        <span class="tutordetails" style="color: blue;  font-size: 10px;">
+                                        <div>{{tutor.students}} active students . {{tutor.lessons}} lessons</div>
+                                        <div>Speaks : {{tutor.language[0]}}<kbd style="background-color:rgb(231, 190, 114);">Native</kbd>, {{tutor.language[1]}}</div> 
+                                        <div><b>{{tutor.certification[0]}} certified {{tutor.certification[1]}} tutor | {{tutor.experience}} years business experience</b></div>
+                                    </span>
+                                    </div>
+                                    <div class="col-3 ratecost">
+                                            <span style="font-size: 14px; vertical-align:top; padding: 10px 5px;">
+                                                <svg width="1em" height="1em" viewBox="0 0 16 16" color="orange" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                                </svg>
+                                                {{tutor.rating}}({{tutor.ratingcount}})<br> &nbsp; &nbsp; 
+                                                <img src="../../assets/001-uk.svg" alt="" width="30px" height="15px">
+                                                &nbsp;  
+                                                <svg width="1em" height="1em"  color="red" viewBox="0 0 16 16" color="blue" class="bi bi-shield-fill-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M8 .5c-.662 0-1.77.249-2.813.525a61.11 61.11 0 0 0-2.772.815 1.454 1.454 0 0 0-1.003 1.184c-.573 4.197.756 7.307 2.368 9.365a11.192 11.192 0 0 0 2.417 2.3c.371.256.715.451 1.007.586.27.124.558.225.796.225s.527-.101.796-.225c.292-.135.636-.33 1.007-.586a11.191 11.191 0 0 0 2.418-2.3c1.611-2.058 2.94-5.168 2.367-9.365a1.454 1.454 0 0 0-1.003-1.184 61.09 61.09 0 0 0-2.772-.815C9.77.749 8.663.5 8 .5zm2.854 6.354a.5.5 0 0 0-.708-.708L7.5 8.793 6.354 7.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                                                </svg>
+                                            </span>
+                                            <span style="padding: 15px;">
+                                                <kbd style="font-size: 40px; padding: 15px; width: 150px; background-color: rgb(107, 156, 147)"><b>${{tutor.price}}</b></kbd>
+                                            </span>
+                                    </div>
+                                </div>
+                                    
+                                <p style="width:100%; font-size: 12px; margin: 0;">{{tutor.description}}</p>
+                                <u style="font-size: 10px; float: left;">see more</u>
+                                <a routerLinkActive="active" (click)="onSelect(tutor)">
+                                 <u style="font-size: 10px; float: right; position: relative; right: 10px;">full profile
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                        <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                </u>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <button  id="chat" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal1">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chat-left-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path fill-rule="evenodd" d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+    </button>
+
+    <!-- Modal -->
+  <div class="modal modal1 fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputmessage">Message</label>
+                  <textarea name="" id="" cols="30" rows="5" class="form-control" id="exampleInputmessage"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Send</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="smallscreen">
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-justify" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="121logo.png" class="img-fluid" alt=""/><b>121Lessons</b>
+            </a>
+          
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Why 1 to 1?<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">How to use</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Find a tutor</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+    <nav class="navbar fixed-bottom">
+        <a href="#">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cast" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.646 9.354l-3.792 3.792a.5.5 0 0 0 .353.854h7.586a.5.5 0 0 0 .354-.854L8.354 9.354a.5.5 0 0 0-.708 0z"/>
+                <path d="M11.414 11H14.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-13a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h3.086l-1 1H1.5A1.5 1.5 0 0 1 0 10.5v-7A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v7a1.5 1.5 0 0 1-1.5 1.5h-2.086l-1-1z"/>
+              </svg> <br> <span>TUTORS</span>
+        </a>
+        <a href="#">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-table" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+              </svg>    <br> <span>LESSONS</span>
+        </a>
+        <a href="">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chat-left-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v11.586l2-2A2 2 0 0 1 4.414 11H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path fill-rule="evenodd" d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+              </svg> <br> <span>INBOX</span>
+        </a>
+        <a href="">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-wallet2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 4l10-3A1.5 1.5 0 0 1 14 2.5v2h-1v-2a.5.5 0 0 0-.5-.5L5.833 4H2.5z"/>
+                <path fill-rule="evenodd" d="M1 5.5A1.5 1.5 0 0 1 2.5 4h11A1.5 1.5 0 0 1 15 5.5v8a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5v-8zM2.5 5a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-11z"/>
+              </svg> <br> <span>WALLET</span>
+        </a>
+        <a href="">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bell-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+              </svg> <br><span>ALERT</span>
+        </a>
+        <a href="">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg> <br><span>PROFILE</span>
+        </a>
+    </nav>
+    <div id="tutors">
+       <div class="container">
+           <br>
+        <form action="">
+            <div class="input-group" style="vertical-align: middle; position: relative; top: 40px;">
+                <input type="text" style=" font-size: 10px; padding: 17px;" class="form-control" placeholder="search by name or use filter..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <a routerLink="/tutors" routerLinkActive="active"><button class="btn btn-success" type="button" id="button-addon2">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                          </svg>
+                    </button></a>
+                </div> &nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-light"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-funnel" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+                  </svg>
+                </button>
+            </div>
+        </form> <div style="clear: both;"></div> <br><br>
+        <small><b>Filters : </b>Age (30-40), Gender (Male), Country (UK), Language (English)...</small>
+        <div id="cardlist">
+            <p>List of teachers</p>
+            <div class="card" *ngFor="let tutor of tutorslist" style="margin: 10px 0px;">
+                <div class="card-body">
+                    <div class="col-4 col4">
+                        <div class="icns">
+                            <i class="fa fa-play-circle-o"></i><br>
+                            <i class="fa fa-heart"></i><br>
+                            <i class="fa fa-envelope"></i><br>
+                            <i class="fa fa-calendar"></i><br>
+                        </div>
+                        <div class="imgfig">
+                            <figure class="figure">
+                                <figcaption class="figure-caption recomend" *ngIf="tutor.recomended">Recomended</figcaption>
+                                <img src="../../assets/srikar.jpg" class="figure-img img-fluid" alt="..." width="100px">
+                                <figcaption class="figure-caption booktl">Book trail lesson</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-8 col8" style="color: blue;">
+                        
+                            <b style="color: red;">{{tutor.name}}</b> <br> <br>
+                            <span>{{tutor.students}} active students * {{tutor.lessons}} lessons </span> <br>
+                            <b>Speaks : </b> {{tutor.language[0]}} <kbd style="background-color: rgb(126, 175, 53);">Native</kbd> , {{tutor.language[1]}}
+                            <br>
+                            <b>{{tutor.certification[0]}} certified {{tutor.certification[1]}} tutor | <br> {{tutor.experience}} years business experience</b> <br>
+                            <a href="#demo" data-toggle="collapse"><u style="font-size: 10px; float: left;">see more</u></a>
+
+                            
+                                        <a routerLinkActive="active" (click)="onSelect(tutor)">
+                                         <u style="font-size: 10px; float: right; position: relative; right: 10px;">full profile
+                                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-double-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                            </svg>
+                                        </u>
+                                        </a>
+                    </div>
+                    <div class="ratecost">
+                        <span style="font-size: 14px; vertical-align: top;">
+                                                
+                            <img src="../../assets/001-uk.svg" alt="" width="30px" height="15px">
+                            
+                            <svg width="1em" height="1em"  color="red" viewBox="0 0 16 16" color="blue" class="bi bi-shield-fill-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M8 .5c-.662 0-1.77.249-2.813.525a61.11 61.11 0 0 0-2.772.815 1.454 1.454 0 0 0-1.003 1.184c-.573 4.197.756 7.307 2.368 9.365a11.192 11.192 0 0 0 2.417 2.3c.371.256.715.451 1.007.586.27.124.558.225.796.225s.527-.101.796-.225c.292-.135.636-.33 1.007-.586a11.191 11.191 0 0 0 2.418-2.3c1.611-2.058 2.94-5.168 2.367-9.365a1.454 1.454 0 0 0-1.003-1.184 61.09 61.09 0 0 0-2.772-.815C9.77.749 8.663.5 8 .5zm2.854 6.354a.5.5 0 0 0-.708-.708L7.5 8.793 6.354 7.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                            </svg>
+                        </span>
+                        <span>
+                            <kbd style="font-size: 20px;"><b>$30</b></kbd> <br>
+                            <span>
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" color="orange" class="bi bi-star-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                </svg>
+                                {{tutor.rating}}({{tutor.ratingcount}})
+                            </span>
+                        </span>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div id="demo" class="collapse card" style="background-color: white; color: black">
+                    <div class="card-body">
+                        <p>{{tutor.description}}</p>
+                    </div>
+               </div>
+            </div>
+        </div>
+       
+        </div>
+    </div>
+</div>
+<script>
+    
+</script>

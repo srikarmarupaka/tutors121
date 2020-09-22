@@ -1,0 +1,196 @@
+.container-fluid {
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #e4e6e6;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.recomend {
+  background-color: #f56f3e;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+.booktl {
+  background-color: #2d89f1;
+  color: white;
+  font-size: 12px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid white;
+  display: table;
+  width: 100%;
+}
+
+.card > .imgfig {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  left: -50px;
+}
+
+.card-body {
+  padding: 0 10px;
+}
+
+.card-body .figure-img {
+  width: 200px;
+  height: 120px;
+  margin: 0;
+}
+
+.card-body .col-2 {
+  padding: 5px;
+}
+
+#chat {
+  color: white;
+  border: 0;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+}
+
+.tutordetails > div {
+  margin: 5px 0px;
+}
+
+.ratecost {
+  display: table;
+  padding: 1px;
+}
+
+.ratecost span {
+  display: table-cell;
+  text-align: center;
+}
+
+.imgfig {
+  display: table;
+}
+
+.imgfig .icns, .imgfig .figure {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.imgfig .icns {
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
+
+.imgfig .icns .fa {
+  color: white;
+  font-size: 18px;
+  background-color: #6b9c93;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  padding: 10px;
+  margin: 1px 5px;
+}
+
+a, a :hover {
+  color: #6b9c93;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 901px) {
+  #smallscreen {
+    display: none;
+  }
+}
+
+/*********************************************************************************************************/
+.navbar {
+  background-color: #126b77;
+  color: white;
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 30px;
+}
+
+.navbar a, .navbar a:hover {
+  color: white;
+}
+
+.navbar a svg, .navbar a:hover svg {
+  text-align: center;
+}
+
+.navbar a span, .navbar a:hover span {
+  font-size: 10px;
+}
+
+.navbar #navbar {
+  color: white;
+}
+
+.navbar .navbar-brand img {
+  width: 25px;
+}
+
+.navbar .navbar-brand b {
+  font-size: 20px;
+}
+
+#tutors {
+  background-color: #e5e2e2;
+  height: 100vh;
+}
+
+#tutors hr {
+  border: 2px solid white;
+  width: 10%;
+}
+
+#tutors small {
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  #bigscreen {
+    display: none;
+  }
+  .imgfig {
+    display: table;
+  }
+  .imgfig .figure-img {
+    width: 100px;
+    height: 80px;
+    margin: 0;
+  }
+  .imgfig .icns, .imgfig .figure {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .imgfig .icns {
+    position: relative;
+    top: 0;
+    bottom: 0;
+  }
+  .imgfig .icns .fa {
+    color: white;
+    font-size: 12px;
+    background-color: #6b9c93;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    padding: 2px;
+    margin: 1px;
+  }
+}
+/*# sourceMappingURL=tutors.component.css.map */

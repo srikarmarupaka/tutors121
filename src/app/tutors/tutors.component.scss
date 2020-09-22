@@ -1,0 +1,232 @@
+.container-fluid{
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(228, 230, 230) ;
+ 
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+    scroll-margin-top: 10rem;
+    box-sizing: border-box;
+}
+
+  @media only screen and (min-width: 901px){
+    #smallscreen{
+        display: none;
+    }
+    .recomend{
+        background-color: rgb(245, 111, 62);
+        color: white;
+        font-size: 12px;
+        text-align: center;
+    }
+    .booktl{
+        background-color: rgb(45, 137, 241);
+        color: white;
+        font-size: 12px;
+        padding: 0 5px;
+        text-align: center;
+    }
+    .card{
+        border: 1px solid white;
+        display: table;
+        width: 100%;
+    }
+    .card>.imgfig{
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        left: -50px;
+    }
+    .card-body{
+        padding: 0 10px;
+        .figure-img{
+          width: 200px;
+          height: 120px;
+          margin: 0;
+        }
+        .col-2{
+            padding: 5px;
+        }
+      }
+      #chat
+      {
+          color: white;
+          border: 0;
+          //background-color: red;
+          padding: 10px;
+          font-size: 20px;
+          border-radius: 50%;
+          position: fixed;
+          bottom: 5%;
+          right: 3%;
+      }
+      .tutordetails > div{
+        margin:5px 0px;
+      }
+      .ratecost{
+          display: table;
+          padding: 1px;
+          span{
+              display: table-cell;
+              text-align: center;
+          }
+      }
+      .imgfig{
+          display: table;
+          .icns,.figure{
+              vertical-align: middle;
+              display: table-cell;
+          }
+          .icns{
+              position: relative;
+              top: 0;
+              bottom: 0;
+              .fa{
+                  color: white;
+                  font-size: 18px;
+                  background-color:rgb(107, 156, 147) ;
+                  height: 40px;
+                  width: 40px;
+                  text-align: center;
+                  padding: 10px;
+                  margin: 1px 5px;
+              }
+          }
+    
+      }
+      a, a :hover{
+          color: rgb(107, 156, 147);
+          text-decoration: none;
+      }
+    
+}
+
+
+/*********************************************************************************************************/
+.navbar{
+    background-color: rgb(18, 107, 119);
+    color: white;
+    .navbar-toggler{
+        color: white;
+        font-size: 30px;
+    }
+    a, a:hover{
+        color: white;
+        svg{
+            text-align: center;
+        }
+        span{
+            font-size: 10px;
+        }
+    }
+    #navbar{
+        color: white;
+    }
+    .navbar-brand{
+        img{
+            width: 25px;
+        }
+        b{
+            font-size: 20px;
+        }
+    }
+}
+#tutors{
+    background-color: rgb(229, 226, 226);
+    height: 100vh;
+    scroll-margin-top: 10rem;
+    hr{
+        border: 2px solid white;
+        width: 10%;
+    }
+    small{
+        font-size:8px ;
+    }
+    
+}
+@media only screen and (max-width:900px){
+    #bigscreen{
+        display:none;
+    }
+    
+    .col4{
+        padding: 2px;
+        width: 33.33%;
+        margin: 0;
+        .figure-img{
+            width: 75px;
+            height: 75px;
+            margin: 0;
+          }
+        .icns,.imgfig{
+            vertical-align: top;
+            display: table-cell;
+            position: relative;
+        }
+        .icns{
+            position: relative;
+            .fa{
+                color: white;
+                font-size: 14px;
+                background-color:rgb(107, 156, 147) ;
+                height: 20px;
+                width: 20px;
+                text-align: center;
+                padding: 3px;
+                margin: 2px 1px;
+            }
+        }  
+        .recomend{
+            background-color: rgb(245, 111, 62);
+            color: white;
+            font-size: 8px;
+            text-align: center;
+        }
+        .booktl{
+            background-color: rgb(45, 137, 241);
+            color: white;
+            font-size: 8px;
+            padding: 0 5px;
+            text-align: center;
+        }  
+    }
+    .col8{
+        margin: 0;
+        padding: 2px;
+        width: 66.66%;
+        position: absolute;
+        left: 33%;
+        top: 5px;
+    }  
+        
+    .ratecost{
+        position: absolute;
+        vertical-align: top;
+        top: 5px;
+        right: 10px;
+        display: table;
+        span{
+            display: table-cell;
+        }
+        kbd{
+            background-color: rgb(107, 156, 147);
+        }
+    }
+    .card-body{
+        padding: 3px 5px;
+        font-size: 10px;
+        position: relative;
+        display: inline;
+        .ratecost{
+            display: table;
+            padding: 1px;
+            span{
+                display: table-cell;
+                text-align: center;
+            }
+        }
+        
+       
+    }
+}

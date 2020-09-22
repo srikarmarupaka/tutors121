@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+}
+
+@media only screen and (max-width: 900px){
+    #bigscreen{
+        display: none;
+    }
+    #landingpage{
+        background-color: rgb(18, 107, 119);
+        height: 100vh;
+        .navbar-toggler{
+            background-color:rgb(18, 107, 119);
+            color:white;
+            font-size: 40px;
+            position: fixed;
+            top: 25px;
+            left: 25px;
+        }
+        .navbar-toggler :focus{
+            color: black;
+            background-color: white;
+        }
+        #navbar{
+            transition-delay: 0s;
+            z-index: 1;
+            background-color: white;
+            padding: 10px;
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            a, a:hover{
+                color: black;
+                text-decoration: none;
+            }
+        }
+        .heading{
+            position: relative;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 90%;
+            color: white;
+            img{
+                height:100px ;
+                max-width: 40%;
+            }
+            hr{
+                
+                border: 2px solid white;
+                width: 10%;
+            }
+            ul{
+                padding: 0px;
+                list-style-type: none;
+                li{
+                    opacity: 0.5;
+                }
+            }
+            button{
+                border-radius: 30px;
+                padding: 15px;
+                border: 0;
+            }
+            .active{
+                font-weight: bold;
+                opacity: 1;
+                font-size: 20px;
+                transition: 1s;
+            }
+         }
+    }
+}
+@media only screen and (min-width: 901px){
+    #smallscreen{
+        display: none;
+    }
+    #navbar
+    {
+        text-align: right;
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        z-index: 1;
+        font-size: small;
+    }
+    .nav-link
+    {
+        color: white;
+    }
+    .active{
+        font-weight: bold;
+        color: white;
+    }
+
+    #Why1to1
+    {
+        background-color:rgb(119, 173, 164);
+        height: 100vh;
+        .row1
+        {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            h1{
+                font-size: 50px;
+            }
+            
+        }
+    }
+
+    #howitworks
+    {
+        height: 100vh;
+        background-color: rgb(127, 185, 176);
+        color: white;
+        .container
+        {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .colbox{
+            width: 80%;
+        }
+        .col-md-3  p
+        {
+            text-align: justify;
+            display: table;
+            span{
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .number{
+            font-size: 70px;
+        }
+        svg
+        {
+            font-size: 30px;
+        }
+        .titl
+        {
+            font-size: 20px;
+        }
+        .row3 p{
+            display: table;
+            vertical-align: middle;
+            span{
+                display: table-cell;
+            }
+        }
+    }
+
+    #findatutor{
+        background-color:  rgb(134, 196, 185);
+        height: 100vh;
+                .row1
+                {
+                    width: 35%;position: relative; top: 50%;left: 50%;transform: translate(-50%,-50%);
+                    h1
+                    {
+                        font-size:67px ;
+                    }
+                    p{
+                        text-align: end;font-size: 22px;
+                    }
+                }
+    }
+    #successstories
+    {
+        height: 100vh;
+
+        background-color: burlywood;
+    }
+    #gettingstarted{
+        height: 100vh;
+
+        background-color: aqua;
+    }
+    #becomeatutor
+    {
+        background-color: black;
+        height: 100vh;
+    }
+    #chat
+    {
+        color: white;
+        border: 0;
+        //background-color: red;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 7%;
+        right: 7%;
+    }
+    #user
+    {
+        background-color: transparent;
+        color: white;
+        position: fixed;
+        top: 10px;
+        left: 20px;
+        font-size: 12px;
+        svg
+        {
+        font-size: 40px;
+        }
+    }
+    #cprt
+    {
+        bottom: 10px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        color: white;
+        a, a :hover{
+        color: white;
+            text-decoration: none;
+        }
+    }
+    .videobtn{
+        color: white;
+        background-color: rgb(100, 146, 138);
+        width: 75px;
+        border-radius: 8px;
+        font-size: 22px;
+    }
+}

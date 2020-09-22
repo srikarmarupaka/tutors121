@@ -1,0 +1,57 @@
+*{
+    clear: both;
+}
+.closer{
+    text-align: center;
+    border: 0;
+    background-color: white;
+    margin: 5px 0px;
+}
+.card{
+    margin: 10px 0px;
+    .card-body{
+        padding: 5px;
+    }
+}
+.ratecost{
+    position: absolute;
+    vertical-align: top;
+    top: 5px;
+    right: 10px;
+    display: table;
+    span{
+        display: table-cell;
+    }
+    kbd{
+        background-color: rgb(107, 156, 147);
+    }
+}
+.booktl{
+    background-color: rgb(45, 137, 241);
+    color: white;
+    font-size: 8px;
+    padding: 0 5px;
+    text-align: center;
+}  
+.headcard, .midcard{
+    font-size: 10px;
+    p{
+        margin: 0px;
+    }
+}
+.bottomcardbody{
+    padding: 0px;
+    .nav-link{
+        color: grey;
+        background-color: rgb(190, 186, 186);
+    }
+    .active{
+        color: blue;
+        background-color: white;
+    }
+    
+
+}
+.bottombuttons> button{
+    margin: 0 10px;
+}
